@@ -76,7 +76,7 @@ function App() {
   return (
     <div className='App'>
       <h1>inlingua Valentine's Match</h1>
-      <button onClick={shuffleCards}>New Game</button>
+      {/* <button onClick={shuffleCards}>New Game</button> */}
 
       <div className='card-grid'>
         {cards.map((card) => (
@@ -89,7 +89,10 @@ function App() {
           />
         ))}
       </div>
-      <p>Turns: {turns}</p>
+      <div className='bottom'>
+        <p>Turns: {turns}</p>
+        <button onClick={shuffleCards}>New Game</button>
+      </div>
     </div>
   )
 }
